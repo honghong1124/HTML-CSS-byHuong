@@ -1,0 +1,115 @@
+
+*{margin:0; padding:0;}
+
+.container-fluid{
+    background-color: #00a6cf;
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+.logo{
+	font-family: 'Dancing Script', cursive;
+	font-weight: 700;
+	font-size: 35px;
+    color: black;
+	margin-left: 5%;
+    text-decoration: none;
+}
+.logo:hover{
+	text-decoration: none;
+	color: #00a6cf;
+    transition: 0.5s;
+}
+.title{
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0px;
+}
+.title p{
+    font-size: 28px;
+}
+.col.login .nut-su {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.col.login button:hover{
+    background-color: #1877f2;
+}
+.col.login .nut-su:hover{
+    color: white;
+}
+.col.login {
+    margin: auto;
+    margin: 20px 0px;
+}
+.login button{
+    background-color: #ffc16b;
+    color: wheat;
+    height: 30px;
+    padding: 0 5px;
+}
+.col .nut {
+    margin: auto;
+    display: table;
+    background-color: #209690;
+}
+
+.col {
+    margin-top: 20px;
+}
+form{
+    display: inline;
+}
+.form-row {
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    padding: 20px 0px;
+}
+.form-row p{
+    font-size: 20px;
+}
+.sign-in {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    height: 340px;
+    background-color: white;
+}
+
+.form-control {
+    height: 25px;
+    font-size: 16px;
+}
+.img-login{
+    width: 620px;
+    height: 380px;
+    opacity: 0.75;
+}
+.facebook{
+    background-color: #1877f2;
+    width: 100px;
+    height: 25px;
+    color: white;
+}
+.login-bottom{
+    padding-top: 20px;
+}
+.other{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding-top: 15px;
+}
+.other .res{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+.other .res:hover{
+    color: #00a6cf;
+}

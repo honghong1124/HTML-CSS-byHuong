@@ -1,0 +1,41 @@
+.content{
+    margin: 100px 0;
+    font-family: 'Noto Serif', serif;
+}
+.title-contact{
+    border-top: solid 2px #008fb3;
+    position: relative;
+    top: 50px;
+}
+.title-contact b{
+    text-transform: uppercase;
+    background-color: white;
+    position: absolute;
+    left: 40%;
+    top: -15px;
+    width: 220px;
+    text-align: center;
+    color: #008fb3;
+}
+.content iframe{
+    margin: 50px 0px;
+}
+.contact{
+    position: relative;
+    top: 80px;
+    padding-bottom: 100px;
+}
+.hotline{
+    margin-top: 20px;
+}
+.hotline-title{
+    background-color: #f30000c9;
+    color: white;
+    width: 85px;
+    padding-left: 5px;
+    /* height: 20px; */
+    display: block;
+}
+.address .name-logo{
+    font-family: 'Dancing Script', cursive;
+}

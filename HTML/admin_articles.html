@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Manage Articles</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/Css/admin_product.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
+    <script src="http://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="../CSS/admin_articles.css">
+    <script type="text/javascript" class="init">
+
+        $(document).ready(function () {
+            $('#tb_info').DataTable();
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div class="display-container size-header">
+        <div class="display-container title-header">
+            <a href="./home.html" style="color: #fff;text-decoration: none">
+                <form><i class="fas fa-arrow-left"></i> Exit</form>
+            </a>
+
+        </div>
+
+    </div>
+    <div class="display-container">
+        <div class="sidebar display-container">
+            <ul>
+                <li><a href="./admin_member.html">
+                        <form>Quản lý khách hàng</form>
+                    </a></li>
+                <li><a href="./admin_articles.html">
+                        <form>Quản lý bài đăng</form>
+                    </a></li>
+            </ul>
+        </div>
+
+        <div class="content display-container">
+            <div id="site2">
+                <div class="list-btn display-container">
+                    <button style="width: 153px; font-size: 15px"><a href="./admin_addArt.html" class="addArt">ADD ARTICLE</a> </button>
+                </div>
+                <div class="list-info-member display-container" id="modul1">
+                    <div>
+                        <h1>LIST ARTICLE</h1>
+                        <table class="table-info" id="tb_info">
+                            <thead>
+                                <tr>
+                                    <th style="width: 5%">ID</th>
+                                    <th style="width: 15%">Tiêu đề</th>
+                                    <th style="width: 45%">Nội dung</th>
+                                    <th style="width: 10%">Tác giả</th>
+                                    <th style="width: 10%">Ngày đăng</th>
+                                    <th style="width: 15%">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="article">
+                                    <td>
+                                        123
+                                    </td>
+                                    <td>
+                                        công tác hậu kiểm cần có trọng tâm, trọng điểm, đặc biệt là với các
+                                        bếp ăn tập thể khu công nghiệp
+                                    </td>
+                                    <td class="content_new">
+                                        Theo đó, công tác hậu kiểm cần có trọng tâm, trọng điểm, đặc biệt là với các
+                                        bếp ăn tập thể khu công nghiệp, trường học, lễ hội, cơ sở thuộc diện không
+                                        phải cấp giấy chứng nhận cơ sở đủ điều kiện ATTP, cơ sở đã được cấp giấy
+                                        chứng nhận cơ sở đủ điều kiện ATTP đạt yêu cầu thực hành sản xuất tốt (GMP).
+                                    </td>
+                                    <td>
+                                        Nhã Kỳ
+                                    </td>
+                                    <td>20:45 08/05/2021</td>
+                                    <td>
+                                        <div>
+                                            <a href="./admin_product_update.html" class="update">
+                                                <button type="button"> Update</button></a>
+                                            <!--<input id="btn_fix" type="button" value="Update" onclick="show_Sanpham(this)">-->
+                                            <!--                                                <input type="button" value="Delete" onclick="show_form_delete2(this)">-->
+                                            <button onclick="show_form_delete2(this)">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="article">
+                                    <td>
+                                        123
+                                    </td>
+                                    <td>
+                                        công tác hậu kiểm cần có trọng tâm, trọng điểm, đặc biệt là với các
+                                        bếp ăn tập thể khu công nghiệp
+                                    </td>
+                                    <td class="content_new">
+                                        Theo đó, công tác hậu kiểm cần có trọng tâm, trọng điểm, đặc biệt là với các
+                                        bếp ăn tập thể khu công nghiệp, trường học, lễ hội, cơ sở thuộc diện không
+                                        phải cấp giấy chứng nhận cơ sở đủ điều kiện ATTP, cơ sở đã được cấp giấy
+                                        chứng nhận cơ sở đủ điều kiện ATTP đạt yêu cầu thực hành sản xuất tốt (GMP).
+                                    </td>
+                                    <td>
+                                        Nhã Kỳ
+                                    </td>
+                                    <td>20:45 08/05/2021</td>
+                                    <td>
+                                        <div>
+                                            <a href="./admin_updateArt.html" class="update">
+                                                <button type="button"> Update</button></a>
+                                            <button onclick="show_form_delete2(this)">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--                                add article-->
+
+
+            <!--                        form delete-->
+            <div id="delSP" class="modal">
+                <form class="modal-content animate">
+                    <div class="container">
+                        <input id="del_id" type="hidden" name="txtID">
+                        <span>
+                            Bạn có thực sự muốn xóa bài viết này không?
+                        </span>
+                    </div>
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="submit">Delete</button>
+                        <button type="button" onclick="document.getElementById('delSP').style.display = 'none'"
+                            class="cancelbtn">Back</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function show_form_delete2(z) {
+
+        document.getElementById("delSP").style.display = "block";
+
+        var myTab = document.getElementById('tb_info');
+        var vitri = z.closest("tr").rowIndex;
+
+        var objCells = myTab.rows.item(vitri).cells;
+        var str = "";
+
+        str = str + objCells.item(0).innerHTML;
+
+
+        document.getElementById("del_id").value = str;
+
+    }
+</script>
+</html>

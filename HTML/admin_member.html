@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Member</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/Css/admin_product.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
+    <script src="http://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="../CSS/admin_mem.css">
+
+</head>
+
+<body>
+    <div class="display-container size-header">
+        <div class="display-container title-header">
+            <a href="./home.html" style="color: #fff;text-decoration: none">
+                <form><i class="fas fa-arrow-left"></i>Exit </form>
+            </a>
+
+        </div>
+
+    </div>
+    <div class="display-container">
+
+        <div class="sidebar display-container">
+            <ul>
+                <li><a href="./admin_member.html">
+                        <form>Quản lý khách hàng</form>
+                    </a></li>
+                <li><a href="./admin_articles.html">
+                        <form>Quản lý bài đăng</form>
+                    </a></li>
+            </ul>
+        </div>
+
+        <div class="content display-container">
+            <div>
+                <div class="list-info-member display-container">
+                    <div>
+                        <h1>LIST MEMBER</h1>
+                        <table class="table-info" id="tb_info">
+                            <thead>
+                                <tr>
+                                    <th style="width: 5%">ID</th>
+                                    <th style="width: 25%">Tài khoản</th>
+                                    <th style="width: 25%">Mật khẩu</th>
+                                    <th style="width: 20%">Email</th>
+                                    <th style="width: 20%">Bình luận</th>
+                                    <th style="width: 20%">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>
+                                        ID
+                                    </td>
+                                    <td>
+                                        nhacnha
+                                    </td>
+                                    <td>
+                                        nhacnha123
+                                    </td>
+                                    <td>
+                                        nhacnhqq@gmail.com
+                                    </td>
+                                    <td>
+                                        Bài viết khá là hữu ích
+                                    </td>
+                                    <td>
+
+                                        <div>
+                                            <button onclick="show_form_delete2(this)">Delete</button>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--                        form delete-->
+            <div id="delSP" class="modal">
+                <form class="modal-content animate">
+                    <div class="container">
+                        <input id="del_id" type="hidden" name="txtID">
+                        <span>
+                            Bạn có thực sự muốn xóa tài khoản này không?
+                        </span>
+                    </div>
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="submit">Delete</button>
+                        <button type="button" onclick="document.getElementById('delSP').style.display = 'none'"
+                            class="cancelbtn">Back</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    function show_form_delete2(z) {
+
+        document.getElementById("delSP").style.display = "block";
+
+        var myTab = document.getElementById('tb_info');
+        var vitri = z.closest("tr").rowIndex;
+
+        var objCells = myTab.rows.item(vitri).cells;
+        var str = "";
+
+        str = str + objCells.item(0).innerHTML;
+
+
+        document.getElementById("del_id").value = str;
+
+    }
+</script>
+<script type="text/javascript" class="init">
+
+    $(document).ready(function () {
+        $('#tb_info').DataTable();
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Article</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/decoupled-document/ckeditor.js"></script>
+</head>
+<style>
+    input{
+        margin: 10px 0px;
+    }
+    button{
+        background-color: black;
+        color: white;
+    }
+    .back{
+        text-decoration: none;
+        color: white;
+    }
+</style>
+<body>
+    <div id="modul_add" class="modal">
+        <form class="modal-content animate" enctype="multipart/form-data">
+            <div class="container">
+                <div class="display-container" style="width: 100%">
+                    <div class="form-info">
+                        <input id="txt0" type="hidden" name="txt_Id" required>
+                        <br>
+                        <label for="uname"><b>Tiêu đề</b></label>
+                        <input id="txt1" type="text" name="txt_Nameproduct" required>
+                        <br>   
+                        <label for="uname"><b>Tác giả</b></label>
+                        <input id="txt3" type="text" name="txt_author" required>
+                        <br>
+                        <label for="uname"><b>Ngày đăng</b></label>
+                        <input id="txt4" type="text" name="txt_date" required>
+                        <br>
+                        <div id="toolbar-container"></div>
+                        <label for="uname"><b>Nội dung</b></label>
+                        <div id="editor">
+                            <p>Viết nội dung ở đây...</p>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="submit">Save</button>
+                <button><a href="./admin_articles.html" class="back">Back</a></button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        DecoupledEditor
+            .create( document.querySelector( '#editor' ) )
+            .then( editor => {
+                const toolbarContainer = document.querySelector( '#toolbar-container' );
+
+                toolbarContainer.appendChild( editor.ui.view.toolbar.element );
+            } )
+            .catch( error => {
+                console.error( error );
+            } );
+            const domEditableElement = document.querySelector( '.ck-editor__editable' );
+            const editorInstance = domEditableElement.ckeditorInstance;
+           
+    </script>
+</body>
+
+</html>

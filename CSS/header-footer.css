@@ -1,0 +1,131 @@
+.thanh-menu{
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+    top:0;
+    height: 80px;
+}
+nav.navbar.navbar-expand-lg.navbar-light.bg-warning {
+    background-color: #00a6cf!important;
+    height: 80px;
+}
+.logo{
+	font-family: 'Dancing Script', cursive;
+	font-weight: 700;
+	font-size: 35px;
+    color: black;
+	margin-left: 5%;
+}
+.logo:hover{
+	text-decoration: none;
+	color: rgb(239, 244, 255);
+    transition: 0.5s;
+}
+.ds-dau{
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+	margin-right: 5%!important;
+}
+.ds-dau li {
+	font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 15px;
+
+}
+.btn.btn-danger{
+	border-radius: 18px;
+	text-transform: none;
+}
+.nut{
+    text-decoration: none;
+    color: #27272c;
+    font-size: 12px;
+}
+.nut:hover{
+    color: aliceblue;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+ /* <===== het header =====> */
+
+ .footer{
+    background-color: #222;
+    color: #afafaf;
+    height: 300px;
+
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.footer-top{
+    display: flex;
+    border-bottom: solid #afafaf 1px;
+    justify-content: space-between;
+    padding: 20px 0;
+    
+}
+.footer-top-hot{
+    margin-top: 20px;
+}
+.footer-top-hot .title{
+    text-transform: initial;
+    color: white;
+    width: 100%;
+	font-family: 'Dancing Script', cursive;
+	font-size: 20px;
+}
+.footer-top-hot.writer{
+	margin-top: 100px;
+}
+.footer-top-hot .author{
+	font-family: 'Dancing Script', cursive;
+	font-size: 25px;
+}
+.footer-list{
+    list-style: none;
+    text-transform: uppercase;
+    padding: 15px 0;
+}
+.footer-list .list-child.email{
+	text-transform: initial;
+}
+.footer-list li{
+    line-height: 1.6;
+
+}
+.list-child{
+    font-size: 14px;
+    color: #afafaf;
+}
+.list-child:hover{
+    color: white;
+}
+a.footer-back-to-top{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #777777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    float: right;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    border: solid #333333 2px;
+    text-decoration: none;
+    color: white;
+}
+.footer-back-to-top:hover{
+    background-color: #00a6cf;
+    border: solid #00a6cf 2px;
+    color: white;
+    text-decoration: none;
+}
